@@ -38,6 +38,7 @@ body{
 
 .menu-nav-button{
   position: relative;
+  top: 10px;
   left: 10px;
   display: grid;
   justify-content:center;
