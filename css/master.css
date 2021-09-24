@@ -1,3 +1,130 @@
-h2{
-  color:green;
+body{
+  color: #555555;
+  /*font-family: Arial, Helvetica, sans-serif;*/
+  font-size: 20px;
+  margin: 0;
+/*background-color: black*/
+}
+/*Buttons*/
+.home-button a{
+  text-decoration: none;
+  color:black;
+}
+.home-button a:hover{
+  color: #555555;
+  
+}
+.navigation-buttons{
+  display: flex;
+  position: relative;
+  top:30vh;
+  left: 8vh;
+  justify-content: space-around;
+  align-items: center;
+  width: 20%;
+  z-index: 1;
+  transition: 0.5s ease-in;
+  opacity: 0;
+}
+.navigation-buttons a{
+  text-decoration: none;
+  color:white;
+}
+.navigation-buttons a:hover{
+  z-index: 1;
+  color: #858585;
+  
+}
+
+.menu-nav-button{
+  position: relative;
+  left: 10px;
+  display: grid;
+  justify-content:center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  z-index: 1;
+  
+ 
+}
+/*navbar*/
+.navbar-top{
+  width: 25px;
+  height: 4px;
+  background: white;
+  border-radius: 2px;
+  transition: all 0.5s ease-in-out;
+}
+.navbar{
+  width: 25px;
+  height: 4px;
+  background: white;
+  border-radius: 2px;
+  transition: all 0.5s ease-in-out;
+}
+.navbar-bottom{
+  width: 25px;
+  height: 4px;
+  background: white;
+  border-radius: 2px;
+  transition: all 0.5s ease-in-out;
+}
+
+.menu-nav-button.clicked .navbar{
+  transform: scaleX(-10x);
+  background: transparent;
+  box-shadow: none;
+}
+.menu-nav-button.clicked .navbar-top{
+  transform: rotate(45deg) translateX(7px) translateY(7px);
+}
+.menu-nav-button.clicked .navbar-bottom{
+  transform: rotate(-45deg) translateX(7px) translateY(-7px);
+
+}
+/***************************/
+.home-container{
+  display: grid;
+  grid-template-rows:1fr 1fr;
+  height:100%;
+  width: 100%;
+
+}
+
+.container{
+  width: 70%;
+  margin: auto;
+}
+.road{
+  background-color: #555555;
+  margin: 0;
+  position: relative;
+  top: -75px;
+
+}
+.center-line{
+  background-color: white;
+}
+.bottom-black{
+  background-color: black;
+}
+.Disunity{
+  position:relative;
+  color: black;
+  font-size: 75px;
+  top: 40px;
+  left: 350px;
+
+}
+
+.Diversity{
+  position:relative;
+  color:white;
+  font-size: 75px;
+  top: -130px;
+  left: 850px;
+
 }
