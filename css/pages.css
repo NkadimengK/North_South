@@ -110,15 +110,27 @@
     width: 70%;
     margin: auto;
   }
-  @media only screen and (max-width: 650px) {
-    .mobile-nav-button{
-        display: grid;
-        left: 78%;
+  @media (max-width: 650px) {
+    .main-containe{
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.1fr 0.9fr;
+        grid-template-areas: "home-nav"
+                              "kontent"
+        ;
     }
-    .color{
-        grid-area: navigation;
+    .regular-home-button{
+        grid-area: home-nav;
         background: black;
+        width: 100vw;
+    }    
+      
+      
+    .mobile-nav-button{
+        grid-area: home-nav;
+        display: grid;
+        left: 90%;
     }
+
     .rest-of-nav-buttons {
         display: none;
         flex-direction: column;
