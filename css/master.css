@@ -99,7 +99,7 @@ body{
   grid-area: tar-road;
   position: relative;
   left: 10px;
-  top:2vh;
+  top:2.5vh;
   display: grid;
   justify-content:center;
   align-items: center;
