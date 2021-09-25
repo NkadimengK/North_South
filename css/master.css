@@ -10,7 +10,7 @@ body{
   display:grid;
   height:100hv;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 0.5fr 1fr;
+  grid-template-rows: 1fr 0.5fr 2fr;
   grid-template-areas: "white-area white-area"
                         "tar-road tar-road"
                         "black-area black-area"
@@ -49,9 +49,10 @@ body{
   position:relative;
   color: black;
   font-size: 75px;
-  top: 50px;
-  left: 350px;
-
+  /*top: 50px;
+  left: 350px;*/
+  top: 15%;
+  left: 25%;
 }
 
 .Diversity{
@@ -59,8 +60,10 @@ body{
   position:relative;
   color:white;
   font-size: 75px;
-  top: -50px;
-  left: 850px;
+  /*top: -50px;
+  left: 850px;*/
+  top: -10%;
+  left: 50%;
 }
 
 /*******Buttons**********/
@@ -74,13 +77,12 @@ body{
 }
 .navigation-buttons{
   grid-area:tar-road;
-  display: flex;
   position: relative;
-  top:32vh;
+  top:2.5vh;
   left: 8vh;
   justify-content: space-around;
   align-items: center;
-  width: 20%;
+  
   z-index: 1;
   transition: 0.5s ease-in;
   opacity: 0;
@@ -88,6 +90,7 @@ body{
 .navigation-buttons a{
   text-decoration: none;
   color:white;
+  margin-right: 2%;
 }
 .navigation-buttons a:hover{
   z-index: 1;
@@ -147,3 +150,41 @@ body{
 
 }
 /***************************/
+/*******Responsive**********/
+
+@media only screen and (max-width: 1020px) {
+  .home-container{
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 0.5fr 2fr;
+    grid-template-areas: "white-area"
+                          "tar-road"
+                          "black-area";
+  }
+}
+@media only screen and (max-width: 800px) {
+  .Disunity{
+    font-size: 50px;
+  }
+  .Diversity{
+    font-size: 50px;
+    top: -10%;
+    left: 50%;
+  }
+}
+@media only screen and (max-width: 520px) {
+  .Diversity{
+    font-size: 50px;
+    top: -10%;
+    left: 25%;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .Disunity{
+    font-size: 50px;
+    left: 18%;
+  }
+  .Diversity{
+    font-size: 50px;
+    left: 15%;
+  }
+}
