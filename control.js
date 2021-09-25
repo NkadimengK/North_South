@@ -1,22 +1,28 @@
+
+//Home page navbar
 const menuNavBtn = document.querySelector('.menu-nav-button');
 var menu = document.querySelector(".navigation-buttons");
-NavigationBar()
-function NavigationBar(){
+
+NavigationBar(menuNavBtn,menu)
+MobileNavigationBar()
+function NavigationBar(navButton,menu){
     let menuClicked = false;
     menuNavBtn.addEventListener('click',() =>{
         if(!menuClicked && menu.style.opacity==0){
-            menuNavBtn.classList.add('clicked');
+            navButton.classList.add('clicked');
             menuClicked = true;
             menu.style.opacity = 1;
             //DisplayMenu()
         }else{
-            menuNavBtn.classList.remove('clicked');
+            navButton.classList.remove('clicked');
             menuClicked = false;
             menu.style.opacity = 0;
         }
     });
 }
-//Display menu
+
+
+
 
 function DisplayMenu(){
     if(menu.style.opacity==0){

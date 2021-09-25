@@ -1,3 +1,5 @@
+
+
 body{
   color: #555555;
   /*font-family: Arial, Helvetica, sans-serif;*/
@@ -18,10 +20,6 @@ body{
 
 }
 
-.container{
-  width: 70%;
-  margin: auto;
-}
 .top-white{
   grid-area: white-area;
   background-color: whitesmoke;
@@ -72,9 +70,9 @@ body{
   color:black;
 }
 .home-button a:hover{
-  color: #555555;
-  
+  color: #555555; 
 }
+
 .navigation-buttons{
   grid-area:tar-road;
   position: relative;
@@ -111,7 +109,7 @@ body{
   cursor: pointer;
   transition: all 0.5s ease-in-out;
   z-index: 1;
-  
+
  
 }
 /*navbar*/
@@ -149,9 +147,10 @@ body{
   transform: rotate(-45deg) translateX(7px) translateY(-7px);
 
 }
-/***************************/
-/*******Responsive**********/
 
+
+
+/*******Responsive Home Page**********/
 @media only screen and (max-width: 1020px) {
   .home-container{
     grid-template-columns: 1fr;

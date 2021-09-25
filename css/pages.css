@@ -1,0 +1,128 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/*******General Pages Buttons*********/
+
+.rest-of-nav-buttons{
+    display: flex;
+    position: relative;
+    grid-area: navigation;
+    background: black;
+    justify-content: space-around;
+    align-items: center;
+    
+  }
+  .rest-of-nav-buttons a{
+    text-decoration: none;
+    position: relative;
+    color: whitesmoke;
+    font-size: 1.5rem;
+  }
+  .rest-of-nav-buttons a:hover{
+      color: #555555;
+  }
+  .regular-home-button{
+    grid-area: home-nav;
+    background: black;
+    
+  
+  }
+  .regular-home-button a{
+    position: relative;
+    top: 25%;
+    text-decoration: none;
+    color:whitesmoke;
+    margin-left: 5%;
+    
+  }
+  .regular-home-button a:hover{
+    color: #555555; 
+  }
+  /*navbar*/
+  .mobile-nav-button{
+    grid-area: navigation;
+    position: relative;
+    left: 90%;
+    top:25%;
+    display: none;
+    justify-content:center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+    z-index: 1;
+  
+   
+  }
+.navbar-top{
+    width: 25px;
+    height: 4px;
+    background: white;
+    border-radius: 2px;
+    transition: all 0.5s ease-in-out;
+  }
+  .navbar{
+    width: 25px;
+    height: 4px;
+    background: white;
+    border-radius: 2px;
+    transition: all 0.5s ease-in-out;
+  }
+  .navbar-bottom{
+    width: 25px;
+    height: 4px;
+    background: white;
+    border-radius: 2px;
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .mobile-nav-button.pressed .navbar{
+    transform: scaleX(-10x);
+    background: transparent;
+    box-shadow: none;
+  }
+  .mobile-nav-button.pressed .navbar-top{
+    transform: rotate(45deg) translateX(7px) translateY(7px);
+  }
+  .mobile-nav-button.pressed .navbar-bottom{
+    transform: rotate(-45deg) translateX(7px) translateY(-7px);
+  
+  }
+  /*******General Page Style*********/
+  
+  .main-container{
+    display:grid;
+    height:100vh;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.1fr 0.9fr;
+    grid-template-areas: "home-nav navigation"
+                          "kontent kontent"
+    ;
+  }
+  .article-background{
+    background: whitesmoke;
+    grid-area: kontent;
+  }
+  .container{
+    width: 70%;
+    margin: auto;
+  }
+  @media only screen and (max-width: 650px) {
+    .mobile-nav-button{
+        display: grid;
+        left: 78%;
+    }
+    .color{
+        grid-area: navigation;
+        background: black;
+    }
+    .rest-of-nav-buttons {
+        display: none;
+        flex-direction: column;
+        grid-area: kontent;
+        
+    }
+  }
