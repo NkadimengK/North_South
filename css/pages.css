@@ -92,7 +92,20 @@
   
   }
   /*******General Page Style*********/
-  
+  h2 a{
+    text-decoration: none;
+    color: black;
+  }
+  h2 a:hover{
+    color: gray;
+  }
+  h2 li{
+    list-style-type: none;
+  }
+  p{
+    margin-top: 1%;
+    margin-bottom: 1%;
+  }
   .main-container{
     display:grid;
     height:100vh;
