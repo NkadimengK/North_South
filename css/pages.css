@@ -107,7 +107,7 @@
     grid-area: kontent;
   }
   .container{
-    width: 70%;
+    width: 60%;
     margin: auto;
   }
   @media (max-width: 650px) {
