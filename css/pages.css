@@ -12,7 +12,7 @@
     background: black;
     justify-content: space-around;
     align-items: center;
-    
+    height: 100%;
   }
   .rest-of-nav-buttons a{
     text-decoration: none;
@@ -26,16 +26,17 @@
   .regular-home-button{
     grid-area: home-nav;
     background: black;
+   
     
   
   }
   .regular-home-button a{
     position: relative;
-    top: 25%;
+    top: 5%;
     text-decoration: none;
     color:whitesmoke;
     margin-left: 5%;
-    
+    height: 100%;
   }
   .regular-home-button a:hover{
     color: #555555; 
