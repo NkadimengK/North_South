@@ -1,0 +1,517 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/*******General Pages Buttons*********/
+
+.rest-of-nav-buttons{
+    display: flex;
+    position: relative;
+    grid-area: navigation;
+    background: black;
+    justify-content: space-around;
+    align-items: center;
+    
+  }
+  .rest-of-nav-buttons a{
+    text-decoration: none;
+    position: relative;
+    color: whitesmoke;
+    font-size: 1.5rem;
+  }
+  .rest-of-nav-buttons a:hover{
+      color: #555555;
+  }
+  .regular-home-button{
+    grid-area: home-nav;
+    background: black; 
+  }
+  .regular-home-button a{
+    position: relative;
+    top: 25%;
+    left: 84.5%;
+    text-decoration: none;
+    color:whitesmoke;
+    margin-left: 5%;
+    z-index: 1;
+    
+  }
+  .regular-home-button a:hover{
+    color: #555555; 
+  }
+  /*navbar*/
+  .mobile-nav-button{
+    grid-area: navigation;
+    position: relative;
+    left: 90%;
+    top:25%;
+    display: none;
+    justify-content:center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+    z-index: 1;
+  
+   
+  }
+.navbar-top{
+    width: 25px;
+    height: 4px;
+    background: white;
+    border-radius: 2px;
+    transition: all 0.5s ease-in-out;
+  }
+  .navbar{
+    width: 25px;
+    height: 4px;
+    background: white;
+    border-radius: 2px;
+    transition: all 0.5s ease-in-out;
+  }
+  .navbar-bottom{
+    width: 25px;
+    height: 4px;
+    background: white;
+    border-radius: 2px;
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .mobile-nav-button.pressed .navbar{
+    transform: scaleX(-10x);
+    background: transparent;
+    box-shadow: none;
+  }
+  .mobile-nav-button.pressed .navbar-top{
+    transform: rotate(45deg) translateX(7px) translateY(7px);
+  }
+  .mobile-nav-button.pressed .navbar-bottom{
+    transform: rotate(-45deg) translateX(7px) translateY(-7px);
+  
+  }
+  /*******General Page Style*********/
+  
+  .main-container{
+    display:grid;
+    height:100vh;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.1fr 0.9fr;
+    grid-template-areas: "home-nav navigation"
+                          "North South"
+    ;
+  
+  }
+
+  .North{
+
+    background: whitesmoke;
+    grid-area: North;
+  }
+  .North-heading{
+    display: flex;
+    justify-content: center;
+    grid-area: headings;
+    margin-bottom: 2rem;
+  }
+  .North-Container{
+    grid-area: North;
+    width: 80%;
+    height:80vh;
+    margin: auto;
+    margin-top: 5%;
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-template-rows:0.1fr 0.8fr 0.2fr;
+    grid-template-areas:  "headings"
+                          "image-area"
+                          "activities-area";
+  }
+  .South{
+    background: black;
+    grid-area: South;
+  }
+  .South-Container{
+    grid-area: South;
+    width: 80%;
+    height:80vh;
+    margin: auto;
+    margin-top: 5%;
+    color: whitesmoke;
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-template-rows:0.1fr 0.8fr 0.2fr;
+    grid-template-areas:  "headings"
+                          "image-area"
+                          "activities-area";
+  }
+  .South-heading{
+
+    display: flex;
+    justify-content: center;
+    grid-area: headings;
+    margin-bottom: 2rem;
+
+  }
+  .South-images{
+    position: relative;
+    top: -15%;
+    grid-area: image-area;
+    border: solid white;
+    height: 125%;
+    
+  }
+  .South-images img{
+    width: 100%; 
+ 
+  }
+  .South-blogs{
+    width: 100%;
+    height: 100%;
+   }
+
+  .North-images{
+    position: relative;
+    top: -15%;
+    grid-area: image-area;
+    border: solid black;
+    height: 125%;
+  }
+
+
+ 
+  .North-blogs{
+      width: 100%;
+      height: 100%;
+    /* transition: opacity 20s;
+      -webkit-transition: opacity 20s;
+      opacity: 0;*/
+
+
+  }
+
+
+  .Scroll-buttons{
+    grid-area: activities-area;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 50%;
+    
+  }
+  .back-button{
+    position: relative;
+    top: 1rem;
+    border-left: 0.3rem solid black;
+    border-bottom: 0.3rem solid black;
+    width: 1rem;
+    height: 1rem;
+    transform: rotate(45deg);
+  }
+  .back-button:hover{
+    border-left: 0.3rem solid gray;
+    border-bottom: 0.3rem solid gray;
+  }
+  .next-button{
+    border-left: 0.3rem solid black;
+    border-bottom: 0.3rem solid black;
+    width: 1rem;
+    height: 1rem;
+    transform: rotate(225deg);
+    margin: 1rem;
+  }
+  .next-button:hover{
+    border-left: 0.3rem solid gray;
+    border-bottom: 0.3rem solid gray;
+  }
+  .Activities-buttons{
+    grid-area: activities-area;
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    top: 40%;
+
+  }
+  .Recharge-button{
+    padding: 10px;
+
+  }
+  .Work-button{
+    padding: 10px;
+  }
+  .D-btn{
+    outline: none;
+    display: block;
+    border: solid 2px black;
+    font-size: 16px;
+    line-height: 1;
+    border-radius: 30px;
+    padding: 10px 15px;
+    font-weight: 600;
+    background: whitesmoke;
+    color: black;
+    cursor: pointer;
+    transition: all 0.3s linear;
+  }
+  .D-btn:hover,.D-btn:focus{
+    background: black;
+    color: whitesmoke;
+  }
+  .D-btn:active{
+    background: rgb(63, 63, 63);
+  }
+  .Read-btn{
+    outline: none;
+    display: block;
+    border: solid 2px black;
+    font-size: 16px;
+    line-height: 1;
+    border-radius: 30px;
+    padding: 10px 15px;
+    font-weight: 600;
+    background: whitesmoke;
+    color: black;
+    cursor: pointer;
+    transition: all 0.3s linear;
+  }
+  .Read-btn:hover,.D-btn:focus{
+    background: black;
+    color: whitesmoke;
+  }
+  .Read-btn:active{
+    background: rgb(63, 63, 63);
+  }
+  .Read-button{
+    padding: 10px;
+  }
+  .W-btn{
+
+    outline: none;
+    display: block;
+    border: solid 2px black;
+    font-size: 16px;
+    line-height: 1;
+    border-radius: 30px;
+    padding: 10px 15px;
+    font-weight: 600;
+    background: whitesmoke;
+    color: black;
+    cursor: pointer;
+    transition: all 0.3s linear;
+  }
+  .W-btn:hover,.W-btn:focus{
+    background: black;
+    color: whitesmoke;
+  }
+  .W-btn:active{
+    background: rgb(63, 63, 63);
+  }
+
+  .Balances{    
+    padding: 4px;
+    grid-area: activities-area;
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    top: 90%;
+  }
+
+  /***South Buttons***/
+  .South-Scroll-buttons{
+    
+    grid-area: activities-area;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 50%;
+    
+  }
+  /*.South-back{
+    border: solid 2px whitesmoke;
+    background: black;
+    height:30px;
+    width: 30px;
+    border-radius: 50%;
+    margin: 15px;
+    transition: 0.5s ease;
+  }*/
+  .South-back-button{
+    position: relative;
+    top: 1rem;
+    border-left: 0.3rem solid whitesmoke;
+    border-bottom: 0.3rem solid whitesmoke;
+    width: 1rem;
+    height: 1rem;
+    transform: rotate(45deg);
+    cursor: pointer;
+    z-index: 1; 
+  }
+  .South-back-button:hover{
+    border-left: 0.3rem solid gray;
+    border-bottom: 0.3rem solid gray;
+  }
+
+  .South-next-button{
+    margin: 1rem;
+    border-left: 0.3rem solid whitesmoke;
+    border-bottom: 0.3rem solid whitesmoke;
+    width: 1rem;
+    height: 1rem;
+    transform: rotate(225deg);
+    cursor: pointer;
+    z-index: 1; 
+  }
+  .South-next-button:hover{
+    border-left: 0.3rem solid gray;
+    border-bottom: 0.3rem solid gray;
+  }
+  .South-Activities-buttons{
+    grid-area: activities-area;
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    top: 40%;
+
+  }
+  .South-Recharge-button{
+    padding: 10px;
+
+  }
+  .South-Work-button{
+    padding: 10px;
+  }
+  .South-D-btn{
+    outline: none;
+    display: block;
+    border: solid 2px whitesmoke;
+    font-size: 16px;
+    line-height: 1;
+    border-radius: 30px;
+    padding: 10px 15px;
+    font-weight: 600;
+    background: black;
+    color: whitesmoke;
+    cursor: pointer;
+    transition: all 0.3s linear;
+  }
+  .South-D-btn:hover,.South-D-btn:focus{
+    background: whitesmoke;
+    color: black;
+  }
+  .South-D-btn:active{
+    background: whitesmoke;
+  }
+  .South-Read-btn{
+    outline: none;
+    display: block;
+    border: solid 2px whitesmoke;
+    font-size: 16px;
+    line-height: 1;
+    border-radius: 30px;
+    padding: 10px 15px;
+    font-weight: 600;
+    background: black;
+    color: whitesmoke;
+    cursor: pointer;
+    transition: all 0.3s linear;
+  }
+  .South-Read-btn:hover,.South-Read-btn:focus{
+    background: whitesmoke;
+    color: black;
+  }
+  .South-Read-btn:active{
+    background: whitesmoke;
+  }
+  .South-Read-button{
+    padding: 10px;
+
+  }
+  .South-W-btn{
+
+    outline: none;
+    display: block;
+    border: solid whitesmoke;
+    font-size: 16px;
+    line-height: 1;
+    border-radius: 30px;
+    padding: 10px 15px;
+    font-weight: 600;
+    background: black;
+    color: whitesmoke;
+    cursor: pointer;
+    transition: all 0.3s linear;
+  }
+  .South-W-btn:hover,.South-W-btn:focus{
+    background: whitesmoke;
+    color: black;
+  }
+  .South-W-btn:active{
+    background: whitesmoke;
+  }
+
+  .South-Balances{
+    padding: 4px;
+    grid-area: activities-area;
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    top: 90%;
+    
+  }
+
+
+  /*********************/
+  @media (max-width: 650px) {
+    .main-container{
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.1fr 0.4fr 0.4fr;
+        grid-template-areas: "home-nav"
+                              "North"
+                              "South"
+        ;
+    }
+    .regular-home-button{
+        grid-area: home-nav;
+        background: black;
+        width: 100vw;
+        height: 60px;
+    }    
+      
+      
+    /*.mobile-nav-button{
+        grid-area: home-nav;
+        display: grid;
+        left: 90%;
+      
+    }*/
+
+    .rest-of-nav-buttons {
+        display: none;
+        flex-direction: column;
+        grid-area: North;
+        
+    }
+
+    .regular-home-button a{
+        left: 30%;
+      }
+    .North-images{
+        height: 110%;  
+    }
+    .Activities-buttons{
+        top: -10%;
+    }
+    .Balances{
+        top: 50%;
+    }
+    .South-images{
+        height: 110%;  
+    }
+    .South-Activities-buttons{
+        top: -10%;
+    }
+    .South-Balances{
+        top: 50%;
+    }
+  }
