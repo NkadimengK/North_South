@@ -57,6 +57,11 @@
   
    
   }
+  ::-webkit-scrollbar{
+    width: 0;
+    background-color: transparent;
+    
+}
 .navbar-top{
     width: 25px;
     height: 4px;
